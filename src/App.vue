@@ -19,7 +19,7 @@
   var randArray = new reactive([]); //randomized array
 
   //score tracker
-  var score = 0;
+  const score = 0;
 
 
   var requestOptions = {
