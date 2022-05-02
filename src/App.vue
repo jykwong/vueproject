@@ -87,7 +87,7 @@
     var clickedAnswer = ans;
     console.log("clicked on " + clickedAnswer);
     if (clickedAnswer === state.pokemon.name.toString()) {
-      this.score += 1;
+      score += 1;
     } else {
       alert("INCORRECT");
     }
