@@ -19,7 +19,7 @@
   var randArray = new reactive([]); //randomized array
 
   //score tracker
-  const score = 0;
+  var score = 0;
 
 
   var requestOptions = {
@@ -89,7 +89,7 @@
     if (clickedAnswer === state.pokemon.name.toString()) {
       this.score += 1;
     } else {
-      alert("INCORRECT");
+      alert(`INCORRECT! That Pokémon is ${state.pokemon.name.charAt(0).toUpperCase()+state.pokemon.name.slice(1)}!`);
     }
     fetchPokemon();
   }
@@ -104,7 +104,7 @@
       <div id="image"><img :src="state.pokemon.sprite" /></div>
     </div>
     <div id="answers">
-        <button class="button" v-for="name in randArray" @click="selectAnswer(name)"> {{ name }} </button>
+        <button class="button" v-for="name in randArray" @click="selectAnswer(name)"> {{ name.charAt(0).toUpperCase() + name.slice(1) }} </button>
 
     </div> <!--end div answers-->
   </div> <!--end div quizApp-->
@@ -126,6 +126,7 @@ body {
   max-width: 1400px;
   min-width: 800px;
   margin: 0 auto;
+  margin-top: 25px;
   padding: 2rem;
   font-weight: normal;
   background-color: #457b9d;
