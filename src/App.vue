@@ -87,7 +87,7 @@
     var clickedAnswer = ans;
     console.log("clicked on " + clickedAnswer);
     if (clickedAnswer === state.pokemon.name.toString()) {
-      score += 1;
+      this.score += 1;
     } else {
       alert(`INCORRECT! That Pokémon is ${state.pokemon.name.charAt(0).toUpperCase()+state.pokemon.name.slice(1)}!`);
     }
